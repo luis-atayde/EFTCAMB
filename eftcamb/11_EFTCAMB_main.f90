@@ -325,6 +325,9 @@ contains
                     case(4)
                         allocate( EFTCAMB_Quintic_Galileon::self%model )
                         call self%model%init( 'Quintic Galileon', 'Quintic Galileon' )
+                     case(5)
+                        allocate( EFTCAMB_Extended_Galileon::self%model )
+                        call self%model%init( 'Extended Galileon', 'Extended Galileon' )
                     case default
                         write(*,'(a,I3)') 'No model corresponding to EFTFlag =', self%EFTflag
                         write(*,'(a,I3)') 'and FullMappingEFTmodel =', self%FullMappingEFTmodel
